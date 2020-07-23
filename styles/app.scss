@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+}
+
+a[href] {
+	color: #000;
+}
+
+.container {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navbar {
+	margin-top: 50px;
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		font-size: 28px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.nav-links {
+		display: flex;
+		margin-left: auto;
+		list-style: none;
+
+		.nav-item {
+			position: relative;
+			display: inline-block;
+			margin-left: 20px;
+			margin-right: 20px;
+			text-decoration: none;
+			transition: opacity .3s;
+
+			&.active {
+				font-weight: 700;
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -10px;
+					left: 0;
+					width: 25px;
+					height: 2px;
+					background-color: #000;
+				}
+			}
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+}
+
+.hero {
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	.text-wrapper {
+		width: 50%;
+
+		&.w-full {
+			width: 100%;
+		}
+
+		.title {
+			font-size: 48px;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		.description {
+			font-size: 22px;
+			line-height: 40px;
+		}
+
+		.cta {
+			display: inline-block;
+			padding: 15px 45px;
+			margin-top: 20px;
+			background-color: #000;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 5px;
+			transition: transform .3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.image-wrapper {
+		width: 50%;
+		text-align: right;
+	}
+}
+
+.portfolio-wrapper {
+	display: flex;
+	margin-left: -10px;
+	margin-right: -10px;
+
+	.portfolio-item {
+		width: 50%;
+		padding-left: 10px;
+		padding-right: 10px;
+		text-align: center;
+
+		.portfolio-image {
+			max-width: 100%;
+		}
+
+		.portfolio-name {
+			font-size: 24px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			text-transform: capitalize;
+		}
+
+		.portfolio-category {
+			color: #999;
+		}
+	}
+}
+
+.contact-links {
+	padding: 0;
+	padding-left: 15px;
+	margin-top: -10px;
+	list-style: square;
+
+	.contact-item {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
