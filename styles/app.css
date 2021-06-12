@@ -1,27 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
   background-color: #AAA;
   color: white;
+  box-sizing: border-box;
+  min-width: 600px;
+  min-height: 400px;
+  padding: 0 100px;
 }
 body * {
   color: inherit;
+  box-sizing: border-box;
 }
 a[href] {
   color: white;
 }
+hr.break-section {
+  width: 40%;
+  min-width: 200px;
+  margin: auto;
+  border-color: #000;
+}
+hr.break-section.double {
+  height: 3px;
+  border-width: 1px 0;
+}
 .container {
-  width: 980px;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
 }
 .navbar {
   margin-top: 50px;
 }
+.navbar * {
+  position: relative;
+}
 .navbar .container {
   display: flex;
   align-items: center;
+  height: 70px;
 }
 .navbar .logo {
   font-size: 24px;
@@ -33,6 +53,19 @@ a[href] {
 }
 .navbar .logo.upper-camel span {
   font-size: 30px;
+}
+.navbar .logo::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  bottom: -7px;
+  right: 10px;
+  border: 2px solid black;
+  border-top: none;
 }
 .navbar .nav-links {
   display: flex;
@@ -60,19 +93,44 @@ a[href] {
   height: 2px;
   background-color: #000;
 }
+.navbar .nav-links li:hover .nav-item.nested-active.active:after {
+  opacity: 0;
+}
+.navbar .nav-links li:hover .nested-nav .nav-item.active:after {
+  bottom: -3px;
+}
 .navbar .nav-links .nav-item:hover {
   opacity: 0.5;
+}
+.navbar .nav-links li .nested-nav {
+  display: block;
+  height: 0;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 200px;
+}
+.navbar .nav-links li:hover .nested-nav {
+  height: auto;
+  padding: 10px 10px 10px 0;
+}
+.navbar .nav-links li .nested-nav ul {
+  padding: 0;
+}
+.navbar .nav-links li .nested-nav ul li:not(:first-child) {
+  padding-top: 10px;
 }
 .hero {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 .hero .container {
-  display: flex;
+  display: block;
   align-items: center;
 }
 .hero .text-wrapper {
-  width: 50%;
+  color: #000;
+  width: auto;
 }
 .hero .text-wrapper.w-full {
   width: 100%;
@@ -83,9 +141,21 @@ a[href] {
   margin-bottom: 10px;
   color: #000;
 }
+.hero .text-wrapper .title span {
+  display: block;
+}
+.hero .text-wrapper .title span:last-child {
+  font-size: 38px;
+}
 .hero .text-wrapper .description {
   font-size: 22px;
   line-height: 40px;
+}
+.hero.job-details .text-wrapper .description {
+  line-height: 30px;
+}
+.hero .text-wrapper li {
+  font-size: 22px;
 }
 .hero .text-wrapper .cta {
   display: inline-block;
@@ -106,11 +176,15 @@ a[href] {
 }
 .portfolio-wrapper {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
 }
 .portfolio-wrapper .portfolio-item {
+  flex: 0 0 46%;
   width: 50%;
+  margin-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
@@ -125,7 +199,8 @@ a[href] {
   text-transform: capitalize;
 }
 .portfolio-wrapper .portfolio-item .portfolio-category {
-  color: #999;
+  font-weight: 600;
+  color: #333;
 }
 .contact-links {
   padding: 0;
@@ -139,5 +214,52 @@ a[href] {
 }
 
 .hl {
-	color: #000;
+  color: #000;
+  text-decoration: underline;
+}
+
+.image-block-wrapper {
+  display: block;
+  width: fit-content;
+  margin: 5% auto 0 auto;
+}
+.image-block-wrapper .image-block-item {
+  display: inline-block;
+  width: 60px;
+  vertical-align: middle;
+}
+.image-block-wrapper .image-block-item:not(:first-child) {
+  margin-left: 50px;
+}
+.image-block-wrapper .image-block-item img {
+  display: block;
+  width: 100%;
+}
+
+.footer-wrapper {
+  padding: 20px 30px;
+  /* margin: auto; */
+  display: block;
+  width: fit-content;
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+.footer-wrapper::before {
+  content: 'Contact Me';
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer-wrapper .image-block-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer-wrapper .image-block-wrapper .image-block-item {
+  margin-left: 20px;
+  width: 30px;
+}
+.footer-wrapper img {
+  filter: invert(1) grayscale(100);
 }
