@@ -1,4 +1,4 @@
 {
   "extends": ["github>karlhorky/renovate-config"],
-  "schedule": ["every month"]
+  "schedule": ["after 4pm on the first thursday of the month"]
 }
