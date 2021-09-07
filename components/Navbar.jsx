@@ -13,12 +13,24 @@ function Navbar({ router }) {
   return (
     <nav className="navbar">
       <div className="container">
-        <Link href="/"><a className="logo">Lutfhi.</a></Link>
+        <Link href="/">
+          <a className="logo">Lutfhi.</a>
+        </Link>
 
         <ul className="nav-links">
-          { navs.map(nav => (
-            <li><Link href={nav.href}><a className={`nav-item ${ router.pathname == nav.href ? 'active' : '' }`}>{nav.text}</a></Link></li>
-          )) }
+          {navs.map((nav) => (
+            <li key={nav.href}>
+              <Link href={nav.href}>
+                <a
+                  className={`nav-item ${
+                    router.pathname == nav.href ? 'active' : ''
+                  }`}
+                >
+                  {nav.text}
+                </a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
