@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.4",
+    "cypress": "^8.3.1",
     "@next/eslint-plugin-next": "^11.0.0",
     "@types/node": "^16.0.0",
     "@types/react": "^17.0.6",

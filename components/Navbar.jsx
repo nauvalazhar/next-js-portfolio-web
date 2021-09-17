@@ -3,10 +3,10 @@ import { withRouter } from 'next/router';
 
 function Navbar({ router }) {
   const navs = [
-    { text: 'Home', href: '/' },
-    { text: 'About', href: '/about' },
-    { text: 'Portfolio', href: '/portfolio' },
-    { text: 'Contact', href: '/contact' },
+    { text: 'Home', href: '/', dataCy: 'homePageLink' },
+    { text: 'About', href: '/about', dataCy: 'aboutPageLink' },
+    { text: 'Portfolio', href: '/portfolio', dataCy: 'portfolioPageLink' },
+    { text: 'Contact', href: '/contact', dataCy: 'contactPageLink' },
     // { text: '', href: '' },
   ];
 
@@ -19,7 +19,7 @@ function Navbar({ router }) {
 
         <ul className="nav-links">
           {navs.map((nav) => (
-            <li key={nav.href}>
+            <li data-cy={nav.dataCy} key={nav.href}>
               <Link href={nav.href}>
                 <a
                   className={`nav-item ${
