@@ -1,7 +1,7 @@
 describe('Can find the different components in the app', () => {
   it('can visit home page and load all page content', () => {
     cy.visit('/');
-    cy.get('[data-cy="homePageTitle"]').contains('Halo, saya Lutfhi Ramadhan');
+    cy.get('[data-cy="homePageTitle"]').should('be.visible');
     cy.get('[data-cy="homePageLink"]').should('be.visible');
     cy.get('[data-cy="portfolioPageLink"]').should('be.visible');
     cy.get('[data-cy="contactPageLink"]').should('be.visible');
