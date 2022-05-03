@@ -23,7 +23,7 @@ function Navbar({ router }) {
               <Link href={nav.href}>
                 <a
                   className={`nav-item ${
-                    router.pathname == nav.href ? 'active' : ''
+                    router.pathname === String(nav.href) ? 'active' : ''
                   }`}
                 >
                   {nav.text}
