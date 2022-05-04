@@ -43,6 +43,8 @@
   },
   "resolutions": {
     "eslint-plugin-react": "7.29.4",
+    "@types/react": "18.0.8",
+    "@types/react-dom": "18.0.3",
     "eslint-plugin-testing-library": "5.2.1",
     "@typescript-eslint/eslint-plugin": "5.22.0",
     "@typescript-eslint/parser": "5.22.0",
