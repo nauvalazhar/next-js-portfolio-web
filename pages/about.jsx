@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 
+document.querySelector();
+document.getElementById();
+document.querySelectorAll();
+
 function About() {
+  const App = ReactDOM.createRoot(document.getElementById('root'));
+  console.log(root);
   return (
     <>
       <Head>
