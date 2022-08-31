@@ -11,20 +11,20 @@
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "1.54.6"
+    "sass": "1.54.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.18.9",
     "@next/eslint-plugin-next": "12.2.5",
     "@types/node": "18.7.14",
-    "@types/react": "18.0.17",
+    "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "@types/sass": "1.43.1",
-    "@typescript-eslint/eslint-plugin": "5.36.0",
-    "@typescript-eslint/parser": "5.36.0",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
+    "@typescript-eslint/parser": "5.36.1",
     "@upleveled/eslint-config-upleveled": "2.12.4",
     "@upleveled/eslint-plugin-upleveled": "2.1.5",
-    "cypress": "10.6.0",
+    "cypress": "10.7.0",
     "eslint": "8.23.0",
     "eslint-config-react-app": "7.0.1",
     "eslint-import-resolver-typescript": "3.5.0",
@@ -43,15 +43,15 @@
   },
   "resolutions": {
     "eslint-plugin-react": "7.31.1",
-    "@types/react": "18.0.17",
+    "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "eslint-plugin-testing-library": "5.6.0",
-    "@typescript-eslint/eslint-plugin": "5.36.0",
-    "@typescript-eslint/parser": "5.36.0",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
+    "@typescript-eslint/parser": "5.36.1",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jest": "26.9.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react-hooks": "4.6.0",
-    "@typescript-eslint/utils": "5.36.0"
+    "@typescript-eslint/utils": "5.36.1"
   }
 }
