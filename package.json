@@ -22,7 +22,7 @@
     "@types/sass": "1.43.1",
     "@typescript-eslint/eslint-plugin": "5.36.1",
     "@typescript-eslint/parser": "5.36.1",
-    "@upleveled/eslint-config-upleveled": "2.12.4",
+    "@upleveled/eslint-config-upleveled": "3.4.4",
     "@upleveled/eslint-plugin-upleveled": "2.1.5",
     "cypress": "10.7.0",
     "eslint": "8.23.0",
