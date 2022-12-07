@@ -22,8 +22,8 @@ function Home() {
               antarmuka pengguna, dan penulis.
             </p>
 
-            <Link href="/contact">
-              <a className="cta">Kontak Saya</a>
+            <Link href="/contact" className="cta">
+              Kontak Saya
             </Link>
           </div>
 

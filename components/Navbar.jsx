@@ -13,21 +13,20 @@ function Navbar({ router }) {
   return (
     <nav className="navbar">
       <div className="container">
-        <Link href="/">
-          <a className="logo">Lutfhi.</a>
+        <Link href="/" className="logo">
+          Lutfhi.
         </Link>
 
         <ul className="nav-links">
           {navs.map((nav) => (
             <li data-cy={nav.dataCy} key={nav.href}>
-              <Link href={nav.href}>
-                <a
-                  className={`nav-item ${
-                    router.pathname === String(nav.href) ? 'active' : ''
-                  }`}
-                >
-                  {nav.text}
-                </a>
+              <Link
+                href={nav.href}
+                className={`nav-item ${
+                  router.pathname === String(nav.href) ? 'active' : ''
+                }`}
+              >
+                {nav.text}
               </Link>
             </li>
           ))}
